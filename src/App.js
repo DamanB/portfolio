@@ -1,11 +1,12 @@
 import Navbar from './components/Navbar.js'
+import Hero from './components/Hero.js'
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <div className="app-content">
-        <h1>Hello World!</h1>        
+        <Hero />        
       </div>
     </div>
   );
