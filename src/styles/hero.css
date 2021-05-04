@@ -44,7 +44,7 @@
     margin-top: -65px;
     text-align: center;
     padding: var(--hero-content-padding);
-    background:radial-gradient(circle at 50% 50%, rgba(49, 49, 77, 0.76) 0%, rgba(0, 0, 0, 0) 90%);    
+    background:radial-gradient(circle at 50% 50%, rgba(49, 49, 77, 0.7) 0%, rgba(49, 49, 77, 0.4) 50%,rgba(49, 49, 77, 0.3) 80%, rgba(0, 0, 0, 0) 90%);    
 }
 
 .hero-content h1{
