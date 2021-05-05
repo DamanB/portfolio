@@ -10,12 +10,12 @@ body {
   /* colors */
   --light: white;
   --dark: black;
-  --primary: red;
-  --secondary: blue;
+  --primary: rgb(214, 18, 18);
+  --secondary: #1a6aff;
 }
 
 /* font classes */
-.ft-thick{
+.ft-bold{
   font-weight: 600;
 }
 
