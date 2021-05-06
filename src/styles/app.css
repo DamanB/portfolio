@@ -21,6 +21,12 @@
     }
 }
 
+h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
 .intro-container{
     display: grid;
     justify-content: center;
