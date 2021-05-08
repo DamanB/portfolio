@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.js'
 import Hero from './components/Hero.js'
 import AboutMe from './components/AboutMe.js'
 import Skills from './components/Skills.js'
+import SoftwareProjects from './components/SoftwareProjects'
 
 // import IntroArt from './assets/img/intro_art.png'
 import Spacer from './components/Spacer.js'
@@ -20,16 +21,18 @@ function App() {
             <AboutMe />
             <Skills />
           </div>
-          <div class="intro-icon-container">
-            <span class="material-icons-outlined">person</span>
-            <span class="">&lt; hello world! &gt;</span>
+          <div className="intro-icon-container">
+            <span className="material-icons-outlined">person</span>
+            <span className="">&lt; hello world! &gt;</span>
           </div>
         </div>
         <Spacer />
       </div>
 
       <div className="software-projects-container">
-        
+        <Spacer />
+        <SoftwareProjects />
+        <Spacer />
       </div>
     </div>
   );

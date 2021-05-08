@@ -1,23 +1,33 @@
 .intro-container{
-    --introcontainer-template-columns: 1fr minmax(50px,12fr) 1fr;
-    --introcontainer-margin: 20px 0px;
-    --introicon-container-display: none;
-    --introcontent-template-columns: 1fr;
+    --introContainer-template-columns: 1fr minmax(50px,12fr) 1fr;
+    --introContainer-margin: 20px 0px 0px;
+    --introIcon-container-display: none;
+    --introContent-template-columns: 1fr;
+}
+
+.software-projects-container
+{
+    --softwareProjectsContainer-template-columns: 1fr minmax(50px,12fr) 1fr;
+    --softwareProjectsContainer-margin: 20px 0px;
 }
 
 @media (min-width: 576px) {
     .intro-container{
-        --introcontainer-template-columns: 1fr 5fr 1fr;
-        --introcontainer-margin: 50px 0px;
+        --introContainer-template-columns: 1fr 5fr 1fr;
+        --introContainer-margin: 25px 0px 0px;
+    }
+    .software-projects-container
+    {
+        --softwareProjectsContainer-template-columns: 1fr 5fr 1fr;
+        --softwareProjectsContainer-margin: 25px 0px;
     }
 }
 
 @media (min-width: 992px) {
     .intro-container{
-        --introcontainer-template-columns: 1fr 5fr 1fr;
-        --introcontainer-margin: 100px 0px;
-        --introcontent-template-columns: repeat(2,1fr);
-        --introicon-container-display: flex;
+        --introContainer-margin: 100px 0px 0px;
+        --introContent-template-columns: repeat(2,1fr);
+        --introIcon-container-display: flex;
     }
 }
 
@@ -27,21 +37,27 @@ h2{
     font-weight: 500;
 }
 
+h3{
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
 .intro-container{
     display: grid;
     justify-content: center;
-    grid-template-columns: var(--introcontainer-template-columns);
-    margin: var(--introcontainer-margin);
+    grid-template-columns: var(--introContainer-template-columns);
+    margin: var(--introContainer-margin);
 }
 
 .intro-content {
     display: grid;
     align-items: center;
-    grid-template-columns: var(--introcontent-template-columns)
+    grid-template-columns: var(--introContent-template-columns)
 }
 
 .intro-icon-container{
-    display: var(--introicon-container-display);
+    display: var(--introIcon-container-display);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -57,4 +73,11 @@ h2{
 
 .intro-icon-container span:nth-child(2){
     font-size:50px;
+}
+
+.software-projects-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: var(--softwareProjectsContainer-template-columns);
+    margin: var(--softwareProjectsContainer-margin);
 }

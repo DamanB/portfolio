@@ -11,11 +11,12 @@ const useFetchCollection = (collection) => {
             setIsPending(true)
             const response = await db.collection(collection).get();
             //Need to add unique doc id to document
-            setData(response.docs.map(doc => {
-                return {...doc.data(), id: doc.id}
+            setData(response.docs.map((doc,index) => {
+                return {...doc.data(), id: index+1}
             }));
         }
         catch(err){
+            console.log(err)
             setError("Unable to fetch from database")
         }
         finally {
