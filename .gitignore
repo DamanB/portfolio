@@ -31,4 +31,3 @@ firebase.json
 .firebaserc
 src/utility/firebase.config.js
 package-lock.json
-
