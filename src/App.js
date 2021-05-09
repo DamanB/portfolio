@@ -5,7 +5,6 @@ import AboutMe from './components/AboutMe.js'
 import Skills from './components/Skills.js'
 import SoftwareProjects from './components/SoftwareProjects'
 
-// import IntroArt from './assets/img/intro_art.png'
 import Spacer from './components/Spacer.js'
 
 function App() {
@@ -16,16 +15,13 @@ function App() {
 
       <div className="intro-container">
         <Spacer />
-        <div className="intro-content">
-          <div>
-            <AboutMe />
-            <Skills />
-          </div>
-          <div className="intro-icon-container">
-            <span className="material-icons-outlined">person</span>
-            <span className="">&lt; hello world! &gt;</span>
-          </div>
-        </div>
+        <AboutMe />
+        <Spacer />
+      </div>
+
+      <div className="skills-container">
+        <Spacer />
+        <Skills />
         <Spacer />
       </div>
 
