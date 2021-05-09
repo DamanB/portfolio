@@ -14,6 +14,19 @@ body {
   --secondary: #1a6aff;
 }
 
+p{
+  line-height: 25px;
+}
+
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
 /* font classes */
 .ft-bold{
   font-weight: 600;
