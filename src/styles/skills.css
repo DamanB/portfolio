@@ -1,14 +1,33 @@
+.skillPill{
+    --skillPill-margin: 12px 15px 12px 0;
+    --skillPill-padding: 10px 19px;
+    --skillPill-fontSize: 14px; 
+}
+
+@media (min-width: 576px) {
+    .skillPill{
+        --skillPill-padding: 10px 20px;
+        --skillPill-fontSize: 15px; 
+    }
+}
+@media (min-width: 992px) {
+    .skillPill{
+        --skillPill-margin: 15px 20px 15px 0;
+        --skillPill-padding: 12px 20px;
+        --skillPill-fontSize: 16px; 
+    }
+}
 
 .skillPills{
     display: inline;
 }
 
 .skillPill{
-    margin: 15px 15px 15px 0px;
-    padding: 12px 20px;
-    font-size: 16px;
+    margin: var(--skillPill-margin);
+    padding: var(--skillPill-padding);
+    font-size: var(--skillPill-fontSize);
 
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
     color: var(--secondary);
 
     border: solid 1px var(--secondary);
