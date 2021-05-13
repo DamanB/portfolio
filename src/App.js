@@ -1,36 +1,25 @@
-import './styles/app.css'
 import Navbar from './components/Navbar.js'
-import Hero from './components/Hero.js'
-import AboutMe from './components/AboutMe.js'
-import Skills from './components/Skills.js'
-import SoftwareProjects from './components/SoftwareProjects'
-
-import Spacer from './components/Spacer.js'
+import ProjectPage from './pages/ProjectPage.js'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import HomePage from './pages/HomePage.js'
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-
-      <div className="intro-container">
-        <Spacer />
-        <AboutMe />
-        <Spacer />
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="pages">
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/projects/:id">
+              <ProjectPage />
+            </Route>
+          </Switch>
+        </div>
       </div>
-
-      <div className="skills-container">
-        <Spacer />
-        <Skills />
-        <Spacer />
-      </div>
-
-      <div className="software-projects-container">
-        <Spacer />
-        <SoftwareProjects />
-        <Spacer />
-      </div>
-    </div>
+    </Router>
   );
 }
 
