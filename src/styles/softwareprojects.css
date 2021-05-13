@@ -1,0 +1,25 @@
+.projectPreview-divider{
+    --projectPreview-divider-margin: 60px 0;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+    .projectPreview-divider{
+        --projectPreview-divider-margin: 100px 0;
+    }
+}
+
+.softwareProjects h2{
+    margin-bottom: 40px;
+}
+
+.projectPreview-divider{
+    margin: var(--projectPreview-divider-margin);
+}

@@ -1,34 +1,54 @@
 .projectPreview{
-    --projectPreview-template-columns: 1fr minmax(50px,12fr) 1fr;
-    --projectPreview-margin: 20px 0px;
+    --projectPreview-template-columns: 1fr 22fr 1fr;
+    --projectPreview-column-gap: 10px;
+    --projectPreview-item-spacing: 0 0 20px 0;
+    --projectPreview-image-display: none;
 }
 
 @media (min-width: 576px) {
     .projectPreview{
-        --projectPreview-template-columns: 1fr minmax(50px,12fr) 1fr;
-        --projectPreview-margin: 20px 0px;
+        --projectPreview-template-columns: 1fr 30fr 1fr;
+        --projectPreview-column-gap: 30px;
     }
 }
 
 @media (min-width: 992px) {
     .projectPreview{
+        --projectPreview-item-spacing: 0 0 25px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .projectPreview{
         --projectPreview-template-columns: 0.5fr 10fr 8fr;
-        --projectPreview-margin: 20px 0px;
+        --projectPreview-column-gap: 50px;
+        --projectPreview-item-spacing: 0 0 27px 0;
+        --projectPreview-image-display: block;
     }
 }
 
 .projectPreview{
     display: grid;
     justify-content: center;
-    grid-column-gap: 50px;
+    grid-column-gap: var(--projectPreview-column-gap);
     grid-template-columns: var(--projectPreview-template-columns);
-    margin: var(--projectPreview-margin);
+}
+
+.projectPreview-spacer{
+    margin: var(--projectPreview-item-spacing);
 }
 
 .preview-body p{
     font-size: 14px;
     line-height: 20px;
-    margin: 25px 0;
+}
+
+.preview-body p:nth-child(1){
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;  
 }
 
 .project-skill{
@@ -36,12 +56,16 @@
     font-style: italic;
 }
 
+.project-links{
+    display: flex;
+    align-items: center;
+}
+
 .project-link{
-    font-size: 40px;
+    font-size: 32px;
     text-decoration: none;
     color: rgb(54, 54, 54);
-    margin-right: 20px;
-    margin-bottom: 25px;
+    margin: 0 0 0 20px;
 }
 
 .project-link:hover{
@@ -61,4 +85,12 @@
     color: var(--primary);
     border: solid 1px var(--primary);
 }
+
+.preview-image img{
+    display: var(--projectPreview-image-display);
+    width: 100%;
+    height: auto;
+    box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.28);
+}
+
 

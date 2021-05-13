@@ -1,3 +1,4 @@
+import '../styles/softwareprojects.css'
 import useFetchCollection from '../hooks/useFetchCollection.js'
 import ProjectPreview from './ProjectPreview.js'
 
@@ -14,6 +15,7 @@ const SoftwareProjects = () => {
                     projects.map((project) => (
                         <div key={project.id}>
                             <ProjectPreview project={project} />
+                            <div className="projectPreview-divider"></div>
                         </div>
                     ))
                 )}

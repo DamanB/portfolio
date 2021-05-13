@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import db from '../utility/firebase.config.js';
+import firebaseApp from '../utility/firebase.config.js';
 
 const useFetchCollection = (collection) => {
     const [data, setData] = useState(null);
@@ -9,7 +9,7 @@ const useFetchCollection = (collection) => {
     const fetch = async() => {
         try{
             setIsPending(true)
-            const response = await db.collection(collection).get();
+            const response = await firebaseApp.db.collection(collection).get();
             //Need to add unique doc id to document
             setData(response.docs.map((doc,index) => {
                 return {...doc.data(), id: index+1}
@@ -28,7 +28,7 @@ const useFetchCollection = (collection) => {
         const abortCont = new AbortController();
         fetch()
         return () => abortCont.abort();
-    },[collection]);
+    },[]);
 
     return { data, isPending, error };
 }
