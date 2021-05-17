@@ -3,9 +3,18 @@ import ProjectPage from './pages/ProjectPage.js'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import HomePage from './pages/HomePage.js'
 
+import useFetchCollection from './hooks/useFetchCollection.js'
+import React from 'react'
+export const SoftwareProjectsContext = React.createContext({})
+
 function App() {
+
+  const { data: projects, error, isPending } = useFetchCollection('softwareprojects')
+
+
   return (
     <Router>
+      <SoftwareProjectsContext.Provider value={{projects, error, isPending}}>
       <div className="App">
         <Navbar />
         <div className="pages">
@@ -19,6 +28,7 @@ function App() {
           </Switch>
         </div>
       </div>
+      </SoftwareProjectsContext.Provider>
     </Router>
   );
 }
