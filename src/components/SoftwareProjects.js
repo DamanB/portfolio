@@ -1,9 +1,11 @@
 import '../styles/softwareprojects.css'
-import useFetchCollection from '../hooks/useFetchCollection.js'
+// import useFetchCollection from '../hooks/useFetchCollection.js'
 import ProjectPreview from './ProjectPreview.js'
+import {SoftwareProjectsContext} from '../App.js'
+import { useContext } from 'react'
 
 const SoftwareProjects = () => {
-    const { data: projects, error, isPending } = useFetchCollection('softwareprojects')
+    const { projects, error, isPending } = useContext(SoftwareProjectsContext)
 
     return ( 
         <div className="softwareProjects">
