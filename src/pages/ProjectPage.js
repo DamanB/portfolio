@@ -1,13 +1,100 @@
+import '../styles/project.css'
+import Spacer from '../components/Spacer.js'
+import SkillPill from '../components/SkillPill.js'
+import ImageSlider from '../components/ImageSlider.js'
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
+import { SoftwareProjectsContext } from '../App.js'
+import { useContext } from 'react'
+import { useHistory, Link } from 'react-router-dom'
 
 const ProjectPage = () => {
     const { id } = useParams();
+    const [project, setProject] = useState();
+    const [error, setError] = useState();
+    const { projects } = useContext(SoftwareProjectsContext)
+    const history = useHistory();
 
-    return ( 
+    const getProject = () => {
+        var _project = projects.filter(project => {
+            return project.id == id
+        })
+        if (_project.length > 0) {
+            setProject(_project[0])
+        }
+        else {
+            setError("Could not find the project")
+        }
+    }
+
+    const handleBackClick = () => {
+        history.go(-1)
+    }
+
+    useEffect(() => {
+        const abortCont = new AbortController();
+        if (projects) {
+            getProject()
+        }
+        return () => abortCont.abort();
+    }, [projects]);
+
+    return (
         <div className="projectpage">
-            <h2>Project { id }</h2>
-        </div> 
+            <Spacer />
+            <div>
+                {project && (
+                    <div className="projectDetails">
+                        <h2>
+                            <span className="material-icons-round back-button" onClick={handleBackClick}>
+                                keyboard_backspace
+                                </span>
+                            {project.title}
+                        </h2>
+                        <p>{project.body}</p>
+
+                        <h3>Technologies: </h3>
+                        <div className="project-skills">
+                            <p>
+                                {(
+                                    project.skills.map((skill, index) => (
+                                        <span className="project-skill" key={index}>{skill}</span>
+                                    ))
+                                )}
+                            </p>
+                        </div>
+
+                        <h3>References</h3>
+                        <div className="project-links-container">
+                            {project.link && (<span>Project: </span>)} 
+                            {project.link && (<a href={project.link} target="_blank">{project.link}</a>)}
+                            {project.sourcecode && (<span>Source Code: </span>)} 
+                            {project.sourcecode && (<a href={project.sourcecode} target="_blank">{project.sourcecode}</a>)}
+                        </div>
+
+                        {project.images[0] &&
+                            (<div className="project-images">
+                                <h3>Visuals</h3>
+                                <ImageSlider images={project.images} />
+                            </div>)
+                        }
+
+                    </div>
+                )}
+                {error && (
+                    <div>
+                        <h2 className="projectDetails">
+                            {error}
+                        </h2>
+                        <p>
+                            <span>Click <Link to="/" >here</Link> to go back</span>
+                        </p>
+                    </div>
+                )}
+            </div>
+            <Spacer />
+        </div>
     );
 }
- 
+
 export default ProjectPage;
