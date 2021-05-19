@@ -1,46 +1,27 @@
-.intro-container{
-    --introContainer-template-columns: 1fr 10fr 1fr;
-    --introContainer-margin: 5px 0;
-}
-.skills-container
-{
-    --skillsContainer-template-columns: 1fr 12fr 1fr;
-    --skillsContainer-margin: 20px 0px;
-}
-.software-projects-container
-{
+.homepage{
+    --introContainer-margin: 10px 0;
+    --homeContainer-template-columns: 1fr 10fr 1fr;
+    --homeContainer-margin: 20px 0px;
     --softwareProjectsContainer-template-columns: 1fr minmax(50px,12fr) 1fr;
     --softwareProjectsContainer-margin: 20px 0px;
 }
 
 @media (min-width: 576px) {
-    .intro-container{
-        --introContainer-template-columns: 1fr 4fr 1fr;
-        --introContainer-margin: 0;
-    }
-    .skills-container
-    {
-        --skillsContainer-template-columns: 1fr 8fr 2fr;
-        --skillsContainer-margin: 0 0 20px 0;
-    }
-    .software-projects-container
-    {
+    .homepage{
+        --introContainer-margin: 100px 0 0 0;
+        --homeContainer-template-columns: 1fr 4fr 1fr;
+        --homeContainer-margin: 0 0 20px 0;
         --softwareProjectsContainer-template-columns: 1fr 9fr 1fr;
-        --softwareProjectsContainer-margin: 0 0 20px 0;
+        --softwareProjectsContainer-margin: 150px 0 20px 0;
     }
 }
 
 @media (min-width: 992px) {
-    .intro-container{
-        --introContainer-template-columns: 2fr 4.5fr 2fr;
-    }
-    .skills-container
+    .homepage
     {
-        --skillsContainer-template-columns: 1fr 4fr 3fr;
-        --skillsContainer-margin: 0 0 25px 0;
-    }
-    .software-projects-container
-    {
+        --introContainer-margin: 200px 0 0 0;
+        --homeContainer-template-columns: 2fr 4.5fr 2fr;
+        --homeContainer-margin: 0 0 25px 0;
         --softwareProjectsContainer-template-columns: 1fr 6fr 1fr;
     }
 }
@@ -57,19 +38,19 @@ h3{
     font-weight: 400;
 }
 
+
 .intro-container{
     display: grid;
-    grid-template-columns: var(--introContainer-template-columns);
-    min-height: 100vh;
+    grid-template-columns: var(--homeContainer-template-columns);
     margin: var(--introContainer-margin)
 }
 
-.skills-container
+.home-container
 {
     display: grid;
     justify-content: center;
-    grid-template-columns: var(--skillsContainer-template-columns);
-    margin: var(--skillsContainer-margin);
+    grid-template-columns: var(--homeContainer-template-columns);
+    margin: var(--homeContainer-margin);
 }
 
 .software-projects-container{
