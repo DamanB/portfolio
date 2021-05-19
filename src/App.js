@@ -1,10 +1,12 @@
-import Navbar from './components/Navbar.js'
-import ProjectPage from './pages/ProjectPage.js'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import HomePage from './pages/HomePage.js'
-
-import useFetchCollection from './hooks/useFetchCollection.js'
 import React from 'react'
+
+import Navbar from './components/Navbar.js'
+import HomePage from './pages/HomePage.js'
+import ProjectPage from './pages/ProjectPage.js'
+import NotFound from './pages/NotFound.js'
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import useFetchCollection from './hooks/useFetchCollection.js'
 export const SoftwareProjectsContext = React.createContext({})
 
 function App() {
@@ -24,6 +26,9 @@ function App() {
             </Route>
             <Route exact path="/projects/:id">
               <ProjectPage />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </div>
