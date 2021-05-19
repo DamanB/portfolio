@@ -23,6 +23,7 @@
     box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.096);
     max-width: var(--imageslider-img-width);
     max-height: 500px;
+    height: 500px;
     object-fit: scale-down;
 }
 
