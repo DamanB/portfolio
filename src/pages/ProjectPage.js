@@ -85,10 +85,11 @@ const ProjectPage = () => {
                     </div>
                 )}
                 {error && (
-                    <div>
-                        <h2 className="projectDetails">
+                    <div className="projectDetails">
+                        <h2>Sorry!</h2>
+                        <h3>
                             {error}
-                        </h2>
+                        </h3>
                         <p>
                             <span>Click <Link to="/" >here</Link> to go back</span>
                         </p>
