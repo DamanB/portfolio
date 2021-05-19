@@ -4,11 +4,13 @@ nav .nav-links a{
 
 .projectpage {
     --projectPage-grid-columns: 1fr 15fr 1fr;
-    --projectPage-padding: 100px 0;
+    --projectPage-padding: 10px 0 40px 0;
 }
 
 @media (min-width: 576px) {
-
+    .projectpage {
+        --projectPage-padding: 50px 0;
+    }
 }
 
 @media (min-width: 992px) {
@@ -26,8 +28,7 @@ nav .nav-links a{
 
 .projectpage h2{
     display: flex;
-    align-items: center;
-    margin: 0;
+    align-items: baseline;
 }
 
 .projectpage h3 {
@@ -37,11 +38,6 @@ nav .nav-links a{
 .back-button{
     margin-right: 1rem;
     font-size: 28px;
-    cursor: pointer;
-}
-
-.back-button:hover{
-    color: var(--primary);
 }
 
 .project-links-container{
@@ -52,7 +48,7 @@ nav .nav-links a{
 }
 
 .project-links-container > * {
-    margin-bottom: 0.75rem;
+    margin: 0.5rem 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;    
@@ -62,8 +58,8 @@ nav .nav-links a{
     color: rgb(37, 37, 37);
 }
 
-.project-links-container > a:hover {
-    text-decoration: none;
-    color: var(--primary);
+.project-interactable:hover{
+    cursor: pointer;
+    color: var(--primary)
 }
 

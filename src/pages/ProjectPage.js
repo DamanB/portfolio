@@ -46,7 +46,7 @@ const ProjectPage = () => {
                 {project && (
                     <div className="projectDetails">
                         <h2>
-                            <span className="material-icons-round back-button" onClick={handleBackClick}>
+                            <span className="material-icons-round back-button project-interactable" onClick={handleBackClick}>
                                 keyboard_backspace
                                 </span>
                             {project.title}
@@ -63,14 +63,17 @@ const ProjectPage = () => {
                                 )}
                             </p>
                         </div>
-
-                        <h3>References</h3>
-                        <div className="project-links-container">
-                            {project.link && (<span>Project: </span>)} 
-                            {project.link && (<a href={project.link} target="_blank">{project.link}</a>)}
-                            {project.sourcecode && (<span>Source Code: </span>)} 
-                            {project.sourcecode && (<a href={project.sourcecode} target="_blank">{project.sourcecode}</a>)}
-                        </div>
+                        {(project.link || project.sourcecode) && (
+                            <div>
+                                <h3>References</h3>
+                                <div className="project-links-container">
+                                    {project.link && (<span>Project: </span>)}
+                                    {project.link && (<a href={project.link} target="_blank" className="project-interactable">{project.link}</a>)}
+                                    {project.sourcecode && (<span>Source Code: </span>)}
+                                    {project.sourcecode && (<a href={project.sourcecode} target="_blank" className="project-interactable">{project.sourcecode}</a>)}
+                                </div>
+                            </div>
+                        )}
 
                         {project.images[0] &&
                             (<div className="project-images">
