@@ -68,9 +68,9 @@ const ProjectPage = () => {
                                 <h3>References</h3>
                                 <div className="project-links-container">
                                     {project.link && (<span>Project: </span>)}
-                                    {project.link && (<a href={project.link} target="_blank" className="project-interactable">{project.link}</a>)}
+                                    {project.link && (<a href={project.link} target="_blank" rel = "noopener noreferrer" className="project-interactable">{project.link}</a>)}
                                     {project.sourcecode && (<span>Source Code: </span>)}
-                                    {project.sourcecode && (<a href={project.sourcecode} target="_blank" className="project-interactable">{project.sourcecode}</a>)}
+                                    {project.sourcecode && (<a href={project.sourcecode} target="_blank" rel = "noopener noreferrer" className="project-interactable">{project.sourcecode}</a>)}
                                 </div>
                             </div>
                         )}

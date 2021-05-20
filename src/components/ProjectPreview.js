@@ -19,8 +19,8 @@ const ProjectPreview = ({ project }) => {
                     )}</p>
                     <div className="project-links">
                         <Link to={`/projects/${project.id}`} ><button className="preview-button">Read More</button></Link>
-                        {project.sourcecode && (<a href={project.sourcecode} target="_blank" className="project-link material-icons-outlined">source</a>)}
-                        {project.link && (<a href={project.link} target="_blank" className="project-link material-icons-round">open_in_new</a>)}
+                        {project.sourcecode && (<a href={project.sourcecode} target="_blank" rel = "noopener noreferrer" className="project-link material-icons-outlined">source</a>)}
+                        {project.link && (<a href={project.link} target="_blank" rel = "noopener noreferrer" className="project-link material-icons-round">open_in_new</a>)}
                     </div>
                 </div>
             </div>
