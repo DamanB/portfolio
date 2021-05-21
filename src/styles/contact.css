@@ -23,7 +23,7 @@
     width: 40px;
     height: 40px;
 }
-.contact-content a {
+.contact-info a {
     color: var(--dark);
     text-decoration: none;
     cursor: pointer;
@@ -32,9 +32,9 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.contact-content a:last-of-type {
+.contact-info:last-child a{
     margin-top: 0.5rem;
 }
-.contact-content a:hover{
+.contact-info a:hover{
     color: var(--primary);
 }
