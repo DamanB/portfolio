@@ -54,7 +54,7 @@
     transition: background-color linear 0.1s;
 }
 .navbar.active {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
 }
 .navbar.active .nav-links{
     padding-bottom: 0.75rem;
