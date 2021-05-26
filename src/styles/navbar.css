@@ -2,9 +2,14 @@
 .navbar {
     --navbar-fs: 17px;
     --navbar-menu-display: block;
+    --navbar-padding: 0 0 0.25rem 0;
     --navbar-item-float: left;
     --navbar-item-direction: column;
-    --navbar-item-spacing: 8px 0px 5px 10px;
+    --navbar-item-spacing: 0.5rem 0px 0.75rem 1rem;
+    --navbar-color: var(--light)
+}
+.navbar.active {
+    --navbar-color: var(--dark);
 }
 .dropdown-navitems{
     display: block;
@@ -13,13 +18,14 @@
     display: none;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) { 
     .navbar {
         --navbar-fs: 23px;
         --navbar-menu-display: none;
+        --navbar-padding: 0 0 0.75rem 0;
         --navbar-item-float: right;
         --navbar-item-direction: flex-start;
-        --navbar-item-spacing: 36px 38px 0px 0px;
+        --navbar-item-spacing: 2.5rem 2.75rem 0px 0px;
     }
     .dropdown-navitems{
         display: none;
@@ -33,7 +39,8 @@
 @media (min-width: 992px) {
     .navbar {
         --navbar-fs: 25px;
-        --navbar-item-spacing: 50px 50px 0px 25px;
+        --navbar-item-spacing: 3.25rem 3.25rem 0px 2rem;
+        --navbar-padding: 0 0 0.75rem 0;
     }
 }
 
@@ -42,12 +49,20 @@
     top: 0;
     left: 0;
     right: 0;
-    color: var(--light);
+    padding: var( --navbar-padding);
+    color: var(--navbar-color);
+    transition: background-color linear 0.1s;
+}
+.navbar.active {
+    background: rgba(255, 255, 255, 0.8);
+}
+.navbar.active .nav-links{
+    padding-bottom: 0.75rem;
 }
 
 .menu-icon{
     display: var(--navbar-menu-display);
-    padding: 7px;
+    padding: 10px;
     font-size: 32px;
     cursor: pointer;
 }
@@ -60,7 +75,7 @@ nav .nav-links {
 
 nav .nav-links a {
     font-size: var(--navbar-fs); 
-    color: var(--light);
+    color: var(--navbar-color);
     text-decoration: none;
     padding-bottom: 2px;
 
@@ -68,5 +83,5 @@ nav .nav-links a {
 }
 
 nav a:hover {
-    border-bottom: 1px solid var(--light);
+    border-bottom: 1px solid var(--navbar-color);
 }

@@ -18,16 +18,18 @@ function App() {
     <Router>
       <SoftwareProjectsContext.Provider value={{projects, error, isPending}}>
       <div className="App">
-        <Navbar />
         <div className="pages">
           <Switch>
             <Route exact path="/">
+              <Navbar animate={true}/>
               <HomePage />
             </Route>
             <Route exact path="/projects/:id">
+              <Navbar animate={false}/>
               <ProjectPage />
             </Route>
             <Route path="*">
+              <Navbar animate={false}/>
               <NotFound />
             </Route>
           </Switch>

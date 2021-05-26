@@ -1,7 +1,3 @@
-nav .nav-links a{
-    color: var(--dark);
-}
-
 .projectpage {
     --projectPage-grid-columns: 1fr 15fr 1fr;
     --projectPage-padding: 10px 0 40px 0;
