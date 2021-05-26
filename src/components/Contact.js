@@ -4,7 +4,7 @@ import Icon_GitHub from '../assets/icons/github.svg'
 import Icon_LinkedIn from '../assets/icons/linkedin.svg'
 
 const Contact = () => {
-    return (<div className="contact">
+    return (<div id="contact" className="contact">
         <h2>Contact</h2>
         <div className="contact-content">
             <div className="contact-info">
