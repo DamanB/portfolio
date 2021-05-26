@@ -1,6 +1,9 @@
 .projectPreview-divider{
     --projectPreview-divider-margin: 60px 0;
 }
+.softwareProjects-search{
+    --softwareProjects-search-color: rgb(143, 143, 143);
+}
 
 @media (min-width: 576px) {
 
@@ -16,10 +19,80 @@
     }
 }
 
+.softwareProjects-list{
+    min-height: 100vh;
+}
+
 .softwareProjects h2{
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
 }
 
 .projectPreview-divider{
     margin: var(--projectPreview-divider-margin);
+}
+
+.softwareProjects-search{
+    display: flex;
+    align-items: center;
+    margin: 0 0 3.5rem 0;
+}
+
+.softwareProjects-search *{
+    font-size: 16px;
+}
+.softwareProjects-search > span:first-of-type{
+    margin: 0.3rem 0.25rem 0 0;
+    font-size: 1.7rem;
+}
+.softwareProjects-search input[type=text]{
+    font-size: 1.3rem;
+    border: none;
+    border-bottom: 1px solid var(--softwareProjects-search-color);
+    width: 400px;
+    margin-right: 2rem;
+    padding-bottom: 0.2rem;
+    color: var(--dark);
+}
+.softwareProjects-search input::placeholder {
+    font-style: italic;
+    color: var(--softwareProjects-search-color);
+    opacity: 1;
+
+}
+.softwareProjects-search input:focus {
+    outline: none;
+    color: var(--dark);
+    border-bottom: 2px solid var(--primary);
+
+}
+
+.softwareProjects-search div {
+    margin-left: 1.8rem;
+}
+
+.softwareProjects-search div > label{
+    margin: 0 1rem 0 0;
+}
+
+.search-button {
+    display: flex;    
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--dark);
+    cursor: pointer;  
+    border: none;
+}
+
+.search-button span
+{
+    font-size: 2rem;
+}
+
+
+.search-button:hover{
+    color: var(--primary);
+}
+
+.search-button:disabled {
+    cursor: default;
+    color: var(--softwareProjects-search-color);
 }
