@@ -1,6 +1,5 @@
 import '../styles/project.css'
 import Spacer from '../components/Spacer.js'
-import SkillPill from '../components/SkillPill.js'
 import ImageSlider from '../components/ImageSlider.js'
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
