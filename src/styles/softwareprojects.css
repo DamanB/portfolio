@@ -3,19 +3,34 @@
 }
 .softwareProjects-search{
     --softwareProjects-search-color: rgb(143, 143, 143);
+    --softwareProjects-search-margins: 0 0 0.5rem 0;
+    --softwareProjects-search-barlength: 250px;
+    --softwareProjects-search-direction: column;
+    --softwareProjects-search-align: flex-start;
 }
 
 @media (min-width: 576px) {
-
+    .softwareProjects-search{
+        --softwareProjects-search-margins: 0 0 0.5rem 0;
+        --softwareProjects-search-barlength: 300px;
+    }
 }
 
 @media (min-width: 992px) {
-
+    .softwareProjects-search{
+        --softwareProjects-search-direction: flex-start;
+        --softwareProjects-search-align: center;
+        --softwareProjects-search-barlength: 350px;
+    }
 }
 
 @media (min-width: 1200px) {
     .projectPreview-divider{
         --projectPreview-divider-margin: 100px 0;
+    }
+
+    .softwareProjects-search{
+        --softwareProjects-search-barlength: 400px;
     }
 }
 
@@ -33,49 +48,60 @@
 
 .softwareProjects-search{
     display: flex;
-    align-items: center;
+    align-items: var(--softwareProjects-search-align);
+    flex-direction: var(--softwareProjects-search-direction);
     margin: 0 0 3.5rem 0;
 }
 
 .softwareProjects-search *{
     font-size: 16px;
 }
-.softwareProjects-search > span:first-of-type{
+
+.softwareProjects-search > div {
+    margin: var(--softwareProjects-search-margins);
+}
+
+.projectSearch-text {
+    display: flex;
+}
+.projectSearch-text > span{
     margin: 0.3rem 0.25rem 0 0;
     font-size: 1.7rem;
 }
-.softwareProjects-search input[type=text]{
+.projectSearch-text > input[type=text]{
     font-size: 1.3rem;
     border: none;
     border-bottom: 1px solid var(--softwareProjects-search-color);
-    width: 400px;
+    width: var(--softwareProjects-search-barlength);
     margin-right: 2rem;
     padding-bottom: 0.2rem;
     color: var(--dark);
 }
-.softwareProjects-search input::placeholder {
+.projectSearch-text > input[type=text]::placeholder {
     font-style: italic;
     color: var(--softwareProjects-search-color);
     opacity: 1;
-
 }
-.softwareProjects-search input:focus {
+.projectSearch-text > input[type=text]:focus {
     outline: none;
     color: var(--dark);
     border-bottom: 2px solid var(--primary);
 
 }
 
-.softwareProjects-search div {
+.projectSearch-radio {
     margin-left: 1.8rem;
 }
 
-.softwareProjects-search div > label{
+.projectSearch-radio > div > label{
     margin: 0 1rem 0 0;
 }
 
+.projectSearch-buttons {
+    align-self: flex-end;
+}
+
 .search-button {
-    display: flex;    
     background-color: rgba(255, 255, 255, 0);
     color: var(--dark);
     cursor: pointer;  
@@ -86,7 +112,6 @@
 {
     font-size: 2rem;
 }
-
 
 .search-button:hover{
     color: var(--primary);
