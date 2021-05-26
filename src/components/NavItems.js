@@ -6,7 +6,7 @@ const NavItems = ({menuOpen}) => {
         <div className="menuItems">
             {menuOpen &&
                 <div className="nav-links">
-                    <Link to="/" >Home</Link>
+                    <HashLink to="/#hero" >Home</HashLink>
                     <HashLink to="/#contact">Contact</HashLink>
                     <a href="https://drive.google.com/file/d/1qXeLp_wptBpARxylE6XOrHZEzTeuvcrK/view?usp=sharing" target="_blank" rel = "noopener noreferrer">Resume</a>
                 </div>
