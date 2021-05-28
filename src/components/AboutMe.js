@@ -6,8 +6,8 @@ const AboutMe = () => {
         <div className="aboutMe">
             <div className="content">
                 <h2 className="ft-medium">About <span>Me</span></h2>
-                <p className="ft-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores cumque debitis ad omnis doloremque, officiis tempora natus laudantium enim, dicta delectus quam? Necessitatibus, temporibus similique. Sapiente, consequuntur architecto. Fuga, modi!</p>
-                <p className="ft-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita veritatis ducimus consequuntur eos, excepturi similique! Dolores dolore explicabo facere modi quia at ipsa aperiam repudiandae alias ipsum eligendi veniam eveniet voluptas reprehenderit nobis sunt provident, iste ab laborum ut, suscipit culpa quasi minima facilis. Ipsam eius commodi corrupti atque laborum facilis perspiciatis ratione cupiditate libero, earum.</p>
+                <p className="ft-bold">Hello my name is Damanveer Bharaj. Having received my Software Engineering (B.Eng.) degree from York University in 2021, I look forward to working on new and exciting projects throughout my career.   </p>
+                <p className="ft-normal">I am a passionate programmer with an interest in creating software solutions to real world problems. As a developer, I have experience working on a range of projects including dynamic web apps, relational databases, computer applications, and interactive games. Below you can find a portfolio showcasing some of these projects. Feel free to check them out!  </p>
             </div>
             <img src={avatar} alt="hello" />
         </div>
