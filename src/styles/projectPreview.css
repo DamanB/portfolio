@@ -43,12 +43,17 @@
     line-height: 20px;
 }
 
-.preview-body p:nth-child(1){
+.preview-project-body{
     display: -webkit-box;
     overflow : hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;  
+}
+
+.preview-project-body > p:not(:first-child){
+    display: none;
+    background: black;
 }
 
 .project-skill{

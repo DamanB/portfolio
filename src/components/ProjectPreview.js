@@ -9,9 +9,9 @@ const ProjectPreview = ({ project }) => {
             <div>
                 <h3 className="projectPreview-spacer">{project.title}</h3>
                 <div className="preview-body">
-                    <p className="ft-normal projectPreview-spacer">{project.body}</p>
+                    <p className="ft-normal projectPreview-spacer preview-project-body" dangerouslySetInnerHTML={{ __html: project.body }}></p>
                     <p className="ft-normal projectPreview-spacer">{(
-                        project.skills.map((skill, index) => (
+                        project.skills.slice(0,3).map((skill, index) => (
                             <span className="project-skill" key={index}>
                                 {skill}
                             </span>

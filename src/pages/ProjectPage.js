@@ -50,7 +50,7 @@ const ProjectPage = () => {
                                 </span>
                             {project.title}
                         </h2>
-                        <p>{project.body}</p>
+                        <p dangerouslySetInnerHTML={{ __html: project.body }}></p>
 
                         <h3>Technologies: </h3>
                         <div className="project-skills">
