@@ -43,7 +43,7 @@
     line-height: 20px;
 }
 
-.preview-project-body{
+.preview-project-body p{
     display: -webkit-box;
     overflow : hidden;
     text-overflow: ellipsis;
@@ -86,6 +86,12 @@
     cursor: pointer;    
 }
 
+.preview-image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .preview-button:hover{
     color: var(--primary);
     border: solid 1px var(--primary);
@@ -93,9 +99,11 @@
 
 .preview-image img{
     display: var(--projectPreview-image-display);
-    width: 100%;
+    width: auto;
     height: auto;
-    box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.28);
+    max-width: 100%;
+    max-height: 300px;
+    box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.13);
 }
 
 
