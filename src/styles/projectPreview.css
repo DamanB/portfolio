@@ -51,7 +51,7 @@
     -webkit-box-orient: vertical;  
 }
 
-.preview-project-body > p:not(:first-child){
+.preview-project-body > *:not(:first-child){
     display: none;
     background: black;
 }

@@ -38,6 +38,10 @@
     font-size: 28px;
 }
 
+.project-skills > p {
+    line-height: 2rem;
+}
+
 .project-links-container{
     margin-bottom: 1rem;
     display: grid;
