@@ -70,7 +70,17 @@ const SoftwareProjects = () => {
                         <div className="projectSearch-text">
                             <label htmlFor="project-search"></label>
                             <span class="material-icons-round">search</span>
-                            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search ..." />
+                            <input 
+                                type="text" 
+                                value={searchQuery} 
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                        searchQuery.length ? setSearchLoading(true) : resetVisibleProjects()
+                                    }
+                                }}
+                                onChange={(e) => setSearchQuery(e.target.value)} 
+                                placeholder={`Search by ${searchType === 'skills' ? 'technology' : 'name'} ...`} 
+                            />
                         </div>
                         <div className="projectSearch-radio">
                             <label htmlFor="project-search-type"></label>

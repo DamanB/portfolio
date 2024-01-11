@@ -4,7 +4,21 @@ import SkillPill from './SkillPill.js'
 
 const Skills = () => {
 
-    const [skills] = useState(["Java", "JavaScript", "HTML", "CSS", "Vue.js", "React", "jQuery", "Bootstrap 4", "Relational Databases", "Responsive Design", "Version Control"]);
+    const [skills] = useState([
+        "JavaScript",
+        "React",
+        "React Native",
+        "Relational Databases",
+        "SQL",
+        "HTML",
+        "CSS",
+        "Material UI",
+        "Java",
+        "Version Control",
+        "Jira",
+        "Responsive Design",
+        "Machine Learning",     
+    ]);
 
     return (
         <div className="skills">
