@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 import { SoftwareProjectsContext } from '../App.js'
 import { useContext } from 'react'
 import { useHistory, Link } from 'react-router-dom'
+import SkillPill from '../components/SkillPill.js';
 
 const ProjectPage = () => {
     const { id } = useParams();
@@ -57,7 +58,7 @@ const ProjectPage = () => {
                             <p>
                                 {(
                                     project.skills.map((skill, index) => (
-                                        <span className="project-skill" key={index}>{skill}</span>
+                                        <SkillPill skill={skill} key={index}/>
                                     ))
                                 )}
                             </p>
